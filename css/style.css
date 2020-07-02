@@ -48,3 +48,6 @@
 .section{
   padding: 100px 0;
 }
+.aboutImage{
+  max-width: 100%; /* make image 100% fo its parent container width */
+}
