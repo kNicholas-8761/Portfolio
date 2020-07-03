@@ -1,67 +1,91 @@
-body{
+body {
   font-size: 14px;
   color: #333;
   background-color: #fff;
   letter-spacing: 1px;
 }
-.slides-navigation{
+.slides-navigation {
   z-index: 6;
 }
-.overlay{
+.overlay {
   width: 100%;
   height: 100%;
-  position: absolute;  
-  z-index:3;
-  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .slides-navigation .prev,
 .slides-navigation .next {
-    width: 47px;
-    height: 47px;
-    background-size: cover;    /*picture will take up entire size*/
-    background-repeat: no-repeat;
+  width: 47px;
+  height: 47px;
+  background-size: cover; /*picture will take up entire size*/
+  background-repeat: no-repeat;
 }
-.slides-navigation a.prev{
-  left: 20px;  
+.slides-navigation a.prev {
+  left: 20px;
   background-image: url(../images/icons/prev.png);
 }
-.slides-navigation a.next{
-  right: 20px;  
+.slides-navigation a.next {
+  right: 20px;
   background-image: url(../images/icons/next.png);
 }
-.titleMessage{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 250px;
-    text-align: center;
-    margin-top: -125px;
-    z-index: 5;
+.titleMessage {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  margin-top: -125px;
+  z-index: 5;
 }
-.titleMessage .heading p{
+.titleMessage .heading p {
   color: white;
-  text-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
   font-weight: 100;
   letter-spacing: 7px;
 }
-.titleMessage .heading .main{
+.titleMessage .heading .main {
   font-size: 50px;
   text-transform: uppercase;
 }
-.titleMessage .heading .sub{
+.titleMessage .heading .sub {
   font-size: 23px;
 }
-.section{
+.section {
   padding: 100px 0;
 }
-.aboutImage{
+.aboutImage {
   max-width: 100%; /* make image 100% fo its parent container width */
 }
-.skilsection{
-  background-color:#30336b;
+.skilsection {
+  background-color: #30336b;
   color: #fff;
-
 }
-#skills h4{
+#skills h4 {
   text-transform: uppercase;
+}
+.skill {
+  text-align: center;
+  margin-left: 10px;
+}
+.chart {
+  position: relative;
+  width: 152px;
+  height: 152px;
+  display: inline-block;
+  text-align: center;
+}
+.chart canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.chart .percent{
+  color: black;
+  line-height: 152px;
+  display: inline-block;
+  font-size: 35px;
+}
+.chart .percent:after {
+  content:'%';
 }
