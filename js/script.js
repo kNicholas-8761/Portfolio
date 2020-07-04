@@ -49,4 +49,11 @@ $(document).ready(function () {
       });
     }
   });
+
+  $(".counter").each(function(){
+    var element = $(this);
+    var endval = parseInt(element.text());
+
+    element.countup(endval)
+  })
 });
