@@ -119,18 +119,18 @@ body {
 .squareInnerContainer:before {
   right: 0px;
 }
-.squareInnerContainer:after{
-left: 0px;
+.squareInnerContainer:after {
+  left: 0px;
 }
-.squareContent h2{
+.squareContent h2 {
   font-size: 56px;
   margin-bottom: 10px;
   font-weight: 400;
-  color:#30336b ;
+  color: #30336b;
 }
-.squareContent h3{
+.squareContent h3 {
   font-size: 13px;
   font-weight: 600;
   margin: 0;
-  color:#30336b ;
+  color: #30336b;
 }
