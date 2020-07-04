@@ -134,3 +134,14 @@ body {
   margin: 0;
   color: #30336b;
 }
+.squareIcon {
+position: absolute;
+    left: 50%;
+    top: -30px;
+    width: 40%;
+    height: 50px;
+    font-size: 45px;
+    margin-left: -20%;
+    color: #444;
+
+}
