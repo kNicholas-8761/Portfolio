@@ -57,7 +57,8 @@ body {
 .aboutImage {
   max-width: 100%; /* make image 100% fo its parent container width */
 }
-.skillsSection, .contactSection {
+.skillsSection,
+.contactSection {
   background-color: #30336b;
   color: #fff;
 }
@@ -135,13 +136,25 @@ body {
   color: #30336b;
 }
 .squareIcon {
-position: absolute;
-    left: 50%;
-    top: -30px;
-    width: 40%;
-    height: 50px;
-    font-size: 45px;
-    margin-left: -20%;
-    color: #444;
-
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  width: 40%;
+  height: 50px;
+  font-size: 45px;
+  margin-left: -20%;
+  color: #444;
+}
+.contactButton {
+  color: #fff;
+  padding: 15px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid;
+  border-radius: 2px;
+}
+.contactButton:hover {
+  text-decoration: none;
+  color:  #30336b;
+  background-color: #fff;
 }
