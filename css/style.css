@@ -158,6 +158,10 @@ body {
   color: #30336b;
   background-color: #fff;
 }
+.filter {
+  text-align: center;
+  width: 100%;
+}
 .filter a {
   color: #535c68;
   border: 1px solid #535c68;
@@ -172,4 +176,9 @@ body {
   background-color: #30336b;
   border-color: #30336b;
   color: #fff;
+}
+.section .heading {
+  text-align: center;
+  padding-bottom: 40px;
+  width: 100%;
 }
