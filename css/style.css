@@ -191,6 +191,11 @@ body {
 }
 .items li img {
   width: 100%;
+   -webkit-transition: all 0.2s linear, 0.3s;
+  -moz-transition: all 0.2s linear, 0.3s;
+  -o-transition: all 0.2s linear, 0.3s;
+  -ms-transition: all 0.2s linear, 0.3s;
+  -transition: all 0.2s linear, 0.3s;
 }
 .items .item {
   position: relative;
@@ -256,4 +261,14 @@ body {
 }
 .items .item:hover .projectLink {
   right: 0px;
+}
+.items .item:hover img {
+  -webkit-transform: scale(1.05, 1.05);
+  -moz-transform: scale(1.05, 1.05);
+  -o-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
+  -ttransform: scale(1.05, 1.05);
+}
+.items{
+  padding: 0px;
 }
