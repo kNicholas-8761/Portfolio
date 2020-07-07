@@ -74,13 +74,13 @@ $(document).ready(function () {
   });
 
   $("#filters a").click(function () {
-    $("#filters.current").removeClass("current");
+    $("#filters .current").removeClass("current");
     $(this).addClass("current");
 
     var selector = $(this).attr("data-filter");
 
     $(".items").isotope({
-      filter: "selector",
+      filter: selector,
       animationOptions: {
         duration: 1500,
         easing: "linear",
