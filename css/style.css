@@ -57,6 +57,32 @@ body {
 .aboutImage {
   max-width: 100%; /* make image 100% fo its parent container width */
 }
+
+#navigation {
+  background-color: #30336b ;
+  padding: 20px 10px;
+  z-index: 100px;
+}
+#navigation li {
+  padding: 0 10px ;
+
+}
+#navigation li a{
+  color: #fff;
+}
+.navbar-brand,
+.navbar-brand:hover {
+  color: #fff;
+}
+.navbar-toggler-icon {
+  color: #fff;
+  background-size: 100%;
+}
+.fa-bars {
+  color: #fff;
+  font-size: 25px;
+}
+
 .skillsSection,
 .contactSection {
   background-color: #30336b;
