@@ -82,6 +82,10 @@ body {
   color: #fff;
   font-size: 25px;
 }
+.fixedNav #navigation {
+  position: fixed;
+  top: 0;
+}
 
 .skillsSection,
 .contactSection {
