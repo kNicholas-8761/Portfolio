@@ -197,6 +197,7 @@ body {
   border: 1px solid #535c68;
   padding: 10px 18px;
   display: block;
+  text-decoration: none;
 }
 .filter li {
   display: inline-block;
@@ -221,7 +222,7 @@ body {
 }
 .items li img {
   width: 100%;
-   -webkit-transition: all 0.2s linear, 0.3s;
+  -webkit-transition: all 0.2s linear, 0.3s;
   -moz-transition: all 0.2s linear, 0.3s;
   -o-transition: all 0.2s linear, 0.3s;
   -ms-transition: all 0.2s linear, 0.3s;
@@ -299,7 +300,7 @@ body {
   -ms-transform: scale(1.05, 1.05);
   -ttransform: scale(1.05, 1.05);
 }
-.items{
+.items {
   padding: 0px;
 }
 .copyrightSection {
@@ -307,6 +308,6 @@ body {
   color: #fff;
   padding: 30px 5px;
 }
-.copyrightSection p{
+.copyrightSection p {
   margin: 0px;
 }
