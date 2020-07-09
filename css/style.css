@@ -59,15 +59,15 @@ body {
 }
 
 #navigation {
-  background-color: #30336b ;
+  background-color: #30336b;
   padding: 20px 10px;
-  z-index: 100px;
+  z-index:100;
+  width: 100%;
 }
 #navigation li {
-  padding: 0 10px ;
-
+  padding: 0 10px;
 }
-#navigation li a{
+#navigation li a {
   color: #fff;
 }
 .navbar-brand,
