@@ -90,6 +90,13 @@ $(document).ready(function () {
     return false;
   });
 
+  $("#navigation li a").click(function(e){
+    e.preventDefault();
+    var targetElement = $(this).attr("href");
+    var targetPositon = $(targetElement).offset().top;
+    $("html, body").animate({scrollTop: targetPositon - 50}, "slow")
+  })
+
   const nav = $("#navigation");
   const navTop = nav.offset().top;
 
