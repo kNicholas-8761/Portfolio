@@ -1,19 +1,28 @@
-$(window).on("load", function(){
-  $(".loader .inner").fadeOut(500, function() {
+$(window).on("load", function () {
+  $(".loader .inner").fadeOut(500, function () {
     $(".loader").fadeOut(750);
   });
-})
+
+  $(".items").isotope({
+    filter: "*",
+    animationOptions: {
+      duration: 1500,
+      easing: "linear",
+      queue: false,
+    },
+  });
+});
 
 $(document).ready(function () {
   $("#slides").superslides({
     animation: "fade",
-    play: 5000,
+    play: 6000,
     pagination: false,
   });
 
   var typed = new Typed(".typed", {
-    strings: ["Software Engineer.", "Web Developer.", "Student."],
-    typeSpeed: 70,
+    strings: ["Software Engineer.", "Web Developer.", "Professional."],
+    typeSpeed: 130,
     loop: true,
     startDelay: 1000,
     showCursor: false,
@@ -21,7 +30,7 @@ $(document).ready(function () {
 
   $(".owl-carousel").owlCarousel({
     loop: true,
-    items: 4,
+    items: 5,
     responsive: {
       0: {
         items: 1,
@@ -33,7 +42,7 @@ $(document).ready(function () {
         items: 3,
       },
       938: {
-        items: 4,
+        items: 5,
       },
     },
   });
@@ -70,15 +79,6 @@ $(document).ready(function () {
   });
   $("[data-fancybox]").fancybox();
 
-  $(".items").isotope({
-    filter: "*",
-    animationOptions: {
-      duration: 1500,
-      easing: "linear",
-      queue: false,
-    },
-  });
-
   $("#filters a").click(function () {
     $("#filters .current").removeClass("current");
     $(this).addClass("current");
@@ -96,12 +96,12 @@ $(document).ready(function () {
     return false;
   });
 
-  $("#navigation li a").click(function(e){
+  $("#navigation li a").click(function (e) {
     e.preventDefault();
     var targetElement = $(this).attr("href");
     var targetPositon = $(targetElement).offset().top;
-    $("html, body").animate({scrollTop: targetPositon - 50}, "slow")
-  })
+    $("html, body").animate({ scrollTop: targetPositon - 50 }, "slow");
+  });
 
   const nav = $("#navigation");
   const navTop = nav.offset().top;
