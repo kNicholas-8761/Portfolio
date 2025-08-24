@@ -126,3 +126,4 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: top }, 1000);
   });
 });
+document.getElementById('year').textContent = new Date().getFullYear();

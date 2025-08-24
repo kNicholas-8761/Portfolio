@@ -463,13 +463,19 @@ a#portfolioLink:hover {
   transform: translateY(0);
 }
 
-.copyrightSection {
-  background-color: #000;
+/* Footer */
+
+.footer {
+  background-color: #30336b;
   color: #fff;
-  padding: 30px 5px;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+  margin-top: 3rem;
 }
-.copyrightSection p {
-  margin: 0px;
+
+.footer p {
+  margin: 0;
 }
 
 @media (max-width: 768px) {
