@@ -1,16 +1,65 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
-  font-size: 14px;
-  color: #333;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #222;
   background-color: #fff;
-  letter-spacing: 1px;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.6rem;
+  font-weight: 300;
+}
+
 .slides-navigation {
   z-index: 6;
 }
+
 .overlay {
   width: 100%;
   height: 100%;
@@ -18,55 +67,76 @@ body {
   z-index: 3;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .slides-navigation .prev,
 .slides-navigation .next {
-  width: 47px;
-  height: 47px;
-  background-size: cover; /*picture will take up entire size*/
+  width: 4.7rem;
+  height: 4.7rem;
+  background-size: cover;
   background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
 .slides-navigation a.prev {
-  left: 20px;
+  left: 2rem;
   background-image: url(../images/icons/prev.png);
 }
+
 .slides-navigation a.next {
-  right: 20px;
+  right: 2rem;
   background-image: url(../images/icons/next.png);
 }
+
 .titleMessage {
   position: absolute;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  height: 250px;
   text-align: center;
-  margin-top: -125px;
   z-index: 5;
+  padding: 0 2rem;
 }
-.titleMessage .heading p {
-  color: white;
-  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
-  font-weight: 100;
-  letter-spacing: 7px;
+
+.titleMessage .heading h1,
+.titleMessage .heading h2 {
+  color: #fff;
+  text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
 }
-.titleMessage .heading .main {
-  font-size: 50px;
+
+.titleMessage .heading h1 {
+  font-weight: 300;
+  letter-spacing: 0.7rem;
+  font-size: clamp(2.4rem, 5vw, 5rem);
   text-transform: uppercase;
 }
-.titleMessage .heading .sub {
-  font-size: 23px;
+
+.titleMessage .heading h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 200;
+  min-height: 2.5rem;
+  white-space: nowrap;
 }
+
 .section {
-  padding: 50px 0;
+  padding: 5rem 0;
 }
+
 .aboutImage {
-  max-width: 100%; /* make image 100% fo its parent container width */
+  max-width: clamp(18rem, 30vw, 32rem);
+  margin: 0 auto;
   border-radius: 50%;
+  display: block;
 }
+
 #about h4 {
-  font-size: 30px;
+  font-size: 3rem;
 }
+
 .paragraph {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 300;
 }
 
@@ -97,10 +167,8 @@ body {
   color: #fff;
   font-size: 25px;
 }
-/* .fixedNav #navigation {
-  position: fixed;
-  top: 0;
-} */
+
+/* Technical Skills*/
 
 .skillsSection,
 .contactSection {
@@ -524,4 +592,113 @@ a#portfolioLink {
 a#portfolioLink:hover {
   color: #4a69bd; /* swap to your accent if different */
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .slides-navigation .prev,
+  .slides-navigation .next {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .slides-navigation a.prev {
+    left: 1rem;
+  }
+
+  .slides-navigation a.next {
+    right: 1rem;
+  }
+
+  .titleMessage {
+    padding: 0 1.5rem;
+  }
+
+  .titleMessage .heading h1 {
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    letter-spacing: 0.4rem;
+  }
+
+  .titleMessage .heading h2 {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    min-height: 2rem;
+  }
+
+  /* Navigation */
+  #navigation li {
+    padding: 0.5rem 0;
+  }
+  #navigation li a {
+    font-size: 1.4rem;
+  }
+
+  /* About me section */
+
+  #about h4 {
+    font-size: clamp(2rem, 5vw, 2.4rem);
+  }
+  #about .paragraph {
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
+  }
+  .aboutImage {
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slides-navigation .prev,
+  .slides-navigation .next {
+    width: 4.7rem;
+    height: 4.7rem;
+  }
+
+  .slides-navigation a.prev {
+    left: 2rem;
+  }
+
+  .slides-navigation a.next {
+    right: 2rem;
+  }
+
+  .titleMessage {
+    padding: 0 2rem;
+  }
+
+  .titleMessage .heading h1 {
+    letter-spacing: 0.5rem;
+    font-size: clamp(3rem, 4vw, 4.5rem);
+  }
+
+  .titleMessage .heading h2 {
+    font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  }
+  /* Navigation */
+  #navigation li a {
+    font-size: 1.8rem;
+  }
+  /* About me */
+
+  #about h4 {
+    font-size: clamp(2.4rem, 3vw, 2.8rem);
+  }
+  #about .paragraph {
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  .slides-navigation a.prev {
+    left: 3rem;
+  }
+
+  .slides-navigation a.next {
+    right: 3rem;
+  }
+
+  .titleMessage {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .titleMessage .heading h1 {
+    font-size: clamp(3.6rem, 4vw, 4.5rem);
+  }
 }
