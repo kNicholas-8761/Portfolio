@@ -116,8 +116,12 @@ p {
 .titleMessage .heading h2 {
   font-size: clamp(1.6rem, 3vw, 2.3rem);
   font-weight: 200;
-  min-height: 2.5rem;
+  line-height: 1.4;
+  height: 3rem;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section {
@@ -184,8 +188,8 @@ p {
 }
 .chart {
   position: relative;
-  width: clamp(12rem, 30vw, 15.2rem);
-  height: clamp(12rem, 30vw, 15.2rem);
+  width: clamp(10rem, 40vw, 15rem);
+  height: clamp(10rem, 40vw, 15rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,10 +200,11 @@ p {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 .chart .percent {
   color: #fff;
-  line-height: 1;
   display: inline-block;
   font-size: clamp(2rem, 5vw, 3.5rem);
 }
@@ -226,25 +231,21 @@ p {
   background: #f1c40f;
 }
 
+/* Stats */
+
 .squareItem {
-  margin-top: 30px;
+  margin-top: 3rem;
   position: relative;
 }
 
 .squareInnerContainer {
   position: relative;
-  padding: 50px 15px 35px;
+  padding: 5rem 1.5rem 3.5rem;
   text-align: center;
   border: 2px solid #444;
   border-top: none;
 }
-.squareInnerContainer:before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  width: 30%;
-  border-bottom: 2px solid #444;
-}
+
 .squareInnerContainer:before,
 .squareInnerContainer:after {
   content: '';
@@ -254,19 +255,19 @@ p {
   border-bottom: 2px solid #444;
 }
 .squareInnerContainer:before {
-  right: 0px;
+  right: 0;
 }
 .squareInnerContainer:after {
-  left: 0px;
+  left: 0;
 }
 .squareContent h2 {
-  font-size: 56px;
-  margin-bottom: 10px;
+  font-size: clamp(2.8rem, 6vw, 5.6rem);
+  margin-bottom: 1rem;
   font-weight: 400;
   color: #30336b;
 }
 .squareContent h3 {
-  font-size: 13px;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 600;
   margin: 0;
   color: #30336b;
@@ -274,171 +275,58 @@ p {
 .squareIcon {
   position: absolute;
   left: 50%;
-  top: -30px;
+  top: -3rem;
   width: 40%;
-  height: 50px;
-  font-size: 45px;
+  height: auto;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   margin-left: -20%;
   color: #444;
 }
+
+/* Contact section */
+
+.contactSection {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.contactSection .subHeading {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.contactSection h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
 .contactButton {
   color: #fff;
-  padding: 15px 20px;
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  padding: clamp(1rem, 2vw, 1.5rem) clamp(1.5rem, 3vw, 2rem);
   display: inline-block;
-  margin-top: 20px;
-  border: 1px solid;
-  border-radius: 2px;
+  margin-top: 2rem;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
 }
+
 .contactButton:hover {
   text-decoration: none;
   color: #30336b;
   background-color: #fff;
 }
-.filter {
-  text-align: center;
-  width: 100%;
-}
-.filter a {
-  color: #535c68;
-  border: 1px solid #535c68;
-  padding: 10px 18px;
-  display: block;
-  text-decoration: none;
-}
-.filter li {
-  display: inline-block;
-  padding: 5px;
-}
-.filter .current {
-  background-color: #30336b;
-  border-color: #30336b;
-  color: #fff;
-}
+
 .section .heading {
   text-align: center;
   padding-bottom: 40px;
   width: 100%;
 }
-.items li {
-  display: inline-block;
-  padding: 5px;
-}
-.itemsContainer {
-  width: 100%;
-}
-.items li img {
-  width: 100%;
-  -webkit-transition:
-    all 0.2s linear,
-    0.3s;
-  -moz-transition:
-    all 0.2s linear,
-    0.3s;
-  -o-transition:
-    all 0.2s linear,
-    0.3s;
-  -ms-transition:
-    all 0.2s linear,
-    0.3s;
-  -transition:
-    all 0.2s linear,
-    0.3s;
-}
-.items .item {
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-.items .icons {
-  position: absolute;
-  width: 90px;
-  height: 40px;
-  left: 50%;
-  top: 50%;
-  margin: -20px auto 0 -47px;
-  text-align: center;
-  z-index: 3;
-}
-.items .icons i {
-  color: #fff;
-  font-size: 20px;
-  margin-top: 9px;
-}
-.items a {
-  width: 40px;
-  height: 40px;
-  background: #30336b;
-  position: relative;
-  display: inline-block;
 
-  -webkit-transition:
-    all 0.2s linear,
-    0.3s;
-  -moz-transition:
-    all 0.2s linear,
-    0.3s;
-  -o-transition:
-    all 0.2s linear,
-    0.3s;
-  -ms-transition:
-    all 0.2s linear,
-    0.3s;
-  -transition:
-    all 0.2s linear,
-    0.3s;
-}
-.items .imageOverlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  opacity: 0;
+/* Projects */
 
-  -webkit-transition:
-    all 0.2s linear,
-    1s;
-  -moz-transition:
-    all 0.2s linear,
-    1s;
-  -o-transition:
-    all 0.2s linear,
-    1s;
-  -ms-transition:
-    all 0.2s linear,
-    1s;
-  -transition:
-    all 0.2s linear,
-    1s;
-}
-.items .item:hover .imageOverlay {
-  opacity: 1;
-}
-.items .openButton {
-  float: left;
-  left: -200px;
-}
-.items .projectLink {
-  float: right;
-  right: -200px;
-}
-.items .item:hover .openButton {
-  left: 0px;
-}
-.items .item:hover .projectLink {
-  right: 0px;
-}
-.items .item:hover img {
-  -webkit-transform: scale(1.05, 1.05);
-  -moz-transform: scale(1.05, 1.05);
-  -o-transform: scale(1.05, 1.05);
-  -ms-transform: scale(1.05, 1.05);
-  -ttransform: scale(1.05, 1.05);
-}
-.items {
-  padding: 0px;
-}
 .copyrightSection {
   background-color: #000;
   color: #fff;
@@ -663,6 +551,13 @@ a#portfolioLink:hover {
   }
   .aboutImage {
     margin-bottom: 2rem;
+  }
+
+  /* Technical skills */
+
+  .skill p {
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    line-height: 1.4;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
